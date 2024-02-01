@@ -1,0 +1,10 @@
+.container {
+  max-width: $container-max-width;
+  margin-inline: auto;
+}
+
+@media (max-width: $container-max-width) {
+  .container {
+    padding: 0 1.6rem;
+  }
+}

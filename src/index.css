@@ -1,0 +1,33 @@
+/* IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Lato:wght@300;400;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+/* COLORS */
+/* FONTS */
+/* MAX VALUES */
+.container {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+@media (max-width: 1120px) {
+  .container {
+    padding: 0 1.6rem;
+  }
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=index.css.map */
