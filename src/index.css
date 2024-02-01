@@ -35,9 +35,5 @@ body {
   display: grid;
   grid-auto-rows: auto 1fr auto auto;
 }
-.grid-rows-3 main {
-  height: 30vh;
-  background-color: orangered;
-}
 
 /*# sourceMappingURL=index.css.map */
