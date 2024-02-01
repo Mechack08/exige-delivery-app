@@ -1,0 +1,9 @@
+.grid-rows-3 {
+  display: grid;
+  grid-auto-rows: auto 1fr auto auto;
+
+  main {
+    height: 30vh;
+    background-color: orangered;
+  }
+}
