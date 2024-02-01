@@ -5,6 +5,7 @@
 /* MAX VALUES */
 .container {
   max-width: 1120px;
+  width: 100%;
   margin-inline: auto;
 }
 
@@ -28,6 +29,15 @@ html {
 body {
   font-family: "Lato", sans-serif;
   background-color: #ffffff;
+}
+
+.grid-rows-3 {
+  display: grid;
+  grid-auto-rows: auto 1fr auto auto;
+}
+.grid-rows-3 main {
+  height: 30vh;
+  background-color: orangered;
 }
 
 /*# sourceMappingURL=index.css.map */
