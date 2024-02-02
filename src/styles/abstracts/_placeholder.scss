@@ -1,0 +1,11 @@
+%base-container {
+  max-width: $container-max-width;
+  width: 100%;
+  margin-inline: auto;
+}
+
+%flex-row-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
