@@ -1,0 +1,17 @@
+header {
+  background-color: $color-text-100;
+  box-shadow: 0px 1px 10px rgba($color: $color-text-900, $alpha: 0.1);
+  padding: 4rem 0 2.4rem;
+}
+
+.header_container {
+  @extend %base-container;
+  @extend %flex-row-space-between;
+  gap: 4rem;
+}
+
+@media (max-width: $container-max-width) {
+  header {
+    padding-inline: 2.4rem;
+  }
+}
