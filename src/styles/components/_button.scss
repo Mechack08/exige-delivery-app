@@ -1,0 +1,111 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 1.6rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: $font-tertiary;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.success,
+.danger {
+  transition: background-color, color, box-shadow 0.3s ease-out;
+}
+
+.success {
+  @include theme;
+}
+
+.danger {
+  @include theme(
+    $bg: $color-state-danger-500,
+    $color: $color-state-danger-100,
+    $hv-color: $color-state-danger-50,
+    $hv-bg: $color-state-danger-400
+  );
+}
+
+.tertiary {
+  @include theme(
+    $bg: $color-tertiary-500,
+    $color: $color-tertiary-100,
+    $hv-color: $color-tertiary-100,
+    $hv-bg: $color-tertiary-400
+  );
+}
+
+.outline-success {
+  border: 1px solid $color-primary-500 !important;
+
+  @include theme(
+    $bg: transparent,
+    $color: $color-primary-500,
+    $hv-color: $color-primary-400,
+    $hv-bg: transparent
+  );
+}
+
+.rounded {
+  border-radius: 99rem !important;
+}
+
+.btn.text {
+  @include theme(
+    $bg: transparent,
+    $color: $color-text-600,
+    $hv-color: $color-primary-500,
+    $hv-bg: transparent
+  );
+
+  box-shadow: none !important;
+
+  &:active {
+    @include theme(
+      $bg: $color-primary-500,
+      $color: $color-primary-100,
+      $hv-color: $color-primary-100,
+      $hv-bg: $color-primary-500
+    );
+
+    transform: translateY(0) !important;
+  }
+}
+
+.small {
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0 !important;
+  border-radius: 50%;
+
+  @extend %center-item;
+
+  svg {
+    font-size: 1.6rem;
+    color: #fff;
+  }
+}
+
+.btn:disabled {
+  background-color: $color-text-400;
+  border-color: $color-text-400;
+  color: $color-text-100;
+  box-shadow: none;
+  cursor: not-allowed;
+
+  &:active {
+    transform: translateY(0);
+  }
+}
