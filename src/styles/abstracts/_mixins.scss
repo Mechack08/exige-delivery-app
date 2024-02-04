@@ -1,0 +1,16 @@
+@mixin theme(
+  $bg: $color-primary-500,
+  $color: $color-primary-100,
+  $hv-bg: $color-primary-400,
+  $hv-color: $color-primary-100
+) {
+  background-color: $bg;
+  color: $color;
+  border: 1px solid $bg;
+
+  &:hover {
+    background-color: $hv-bg;
+    color: $hv-color;
+    border: 1px solid $hv-bg;
+  }
+}
