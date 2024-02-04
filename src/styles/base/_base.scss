@@ -1,11 +1,19 @@
 .container {
-  max-width: $container-max-width;
-  width: 100%;
-  margin-inline: auto;
+  @extend %base-container;
 }
 
 @media (max-width: $container-max-width) {
   .container {
     padding: 0 1.6rem;
   }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
 }
