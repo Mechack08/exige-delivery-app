@@ -1,0 +1,67 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $color-text-800;
+  }
+
+  input {
+    width: 100%;
+    max-width: 592px;
+    padding: 1.2rem 2.4rem;
+    border: 1px solid $color-text-300;
+    background-color: $color-text-100;
+    border-radius: 0.4rem;
+    color: $color-text-800;
+    font-weight: 700;
+
+    &::placeholder {
+      color: $color-text-500;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &:hover {
+      border: 1px solid $color-state-success;
+    }
+
+    &:focus {
+      outline: 1px solid $color-state-success;
+    }
+
+    &.left-40 {
+      padding-left: 5.6rem !important;
+    }
+
+    &.right-40 {
+      padding-right: 5.6rem !important;
+    }
+  }
+
+  svg {
+    font-size: 2.4rem;
+    color: $color-text-500;
+  }
+}
+
+.relative-pos {
+  position: relative;
+}
+
+.center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-24 {
+  left: 2.4rem !important;
+}
+
+.right-24 {
+  right: 2.4rem !important;
+}
