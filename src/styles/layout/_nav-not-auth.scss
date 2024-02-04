@@ -1,0 +1,4 @@
+.nav {
+  @extend %flex-row-space-between;
+  gap: 1.6rem;
+}
