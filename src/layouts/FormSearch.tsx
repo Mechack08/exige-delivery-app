@@ -1,4 +1,4 @@
-import { MdOutlineSearch } from "react-icons/md";
+import { RiSearchLine } from "react-icons/ri";
 
 import Input from "../components/Input";
 
@@ -8,7 +8,7 @@ export default function FormSearch() {
       <Input
         placeholder="Tape and get what to eat..."
         radius="Rounded"
-        icon={<MdOutlineSearch />}
+        icon={<RiSearchLine />}
         iconPosition="Left"
       />
     </form>
