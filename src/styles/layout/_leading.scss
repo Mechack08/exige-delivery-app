@@ -1,0 +1,5 @@
+.grid-full-auto {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.6rem;
+}

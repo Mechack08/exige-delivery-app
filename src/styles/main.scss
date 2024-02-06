@@ -1,8 +1,19 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/placeholder";
 
 @import "base/base";
 @import "base/reset";
 @import "base/typography";
 
 @import "layout/grid";
+@import "layout/header";
+@import "layout/nav-not-auth";
+@import "layout/form-search";
+@import "layout/leading";
+@import "layout/main";
+@import "layout/aside";
+
+@import "components/logo";
+@import "components/button";
+@import "components/input";

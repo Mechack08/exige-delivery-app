@@ -1,10 +1,11 @@
+import Header from "../layouts/Header";
+import Leading from "../layouts/Leading";
+
 export default function Home() {
   return (
     <div className="grid-rows-3">
-      <header>Header</header>
-      <main className="container">
-        <div>Main</div>
-      </main>
+      <Header />
+      <Leading />
       <div>Partners</div>
       <footer>Footer</footer>
     </div>
