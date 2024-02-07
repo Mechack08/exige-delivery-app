@@ -1,0 +1,9 @@
+.pos-parent {
+  right: 4rem;
+  bottom: 4rem;
+}
+
+.flex-16 {
+  @extend %flex;
+  @extend %gap-8;
+}
