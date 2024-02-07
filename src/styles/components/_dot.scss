@@ -1,0 +1,12 @@
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: $color-tertiary-100;
+}
+
+.dot.active {
+  background-color: $color-tertiary-400;
+  transform: scale(1.2);
+}
