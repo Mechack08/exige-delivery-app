@@ -1,0 +1,16 @@
+.display__item {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  background-color: $color-tertiary-100;
+  border-radius: 99px;
+  color: $color-text-900;
+
+  @extend %center-item;
+  @extend %gap-4;
+
+  svg {
+    color: $color-state-danger-400;
+    cursor: pointer;
+  }
+}
