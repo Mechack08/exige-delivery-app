@@ -1,0 +1,41 @@
+.cart__controls {
+  align-self: end;
+  display: flex;
+  align-items: center;
+  gap: 0.64rem;
+  border: 1px solid $color-text-500;
+  width: 10rem;
+  padding: 0.4rem;
+  border-radius: 99rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    background-color: $color-primary-200;
+    padding: 0.24rem 0.8rem;
+    cursor: pointer;
+    border-radius: 99rem;
+
+    &:active {
+      background-color: $color-primary-300;
+    }
+  }
+
+  input {
+    width: 3.2rem;
+    outline: none;
+    border: 1px solid $color-text-300;
+    border-radius: 99px;
+    padding: 0.32rem 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    &:hover {
+      border: 1px solid $color-state-success;
+    }
+    &:focus {
+      outline: 1px solid $color-state-success;
+    }
+  }
+}
