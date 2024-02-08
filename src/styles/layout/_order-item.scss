@@ -1,0 +1,75 @@
+.order__item {
+  @extend %flex-col;
+  @extend %gap-16;
+
+  position: relative;
+  padding-top: 1.6rem;
+
+  &:not(:nth-child(1))::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-text-300;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .main__food {
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 8rem 1fr auto;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 0.8rem;
+
+    & > .img-container {
+      grid-row: 1 / -1;
+
+      img {
+        border-radius: 0.8rem;
+      }
+    }
+
+    & > .title {
+      font-weight: 600;
+    }
+    & > .price {
+      justify-self: end;
+    }
+
+    & > .delete-btn {
+      font-size: 1.1rem;
+      cursor: pointer;
+      align-self: end;
+      justify-self: end;
+      padding: 0.24rem 0.64rem;
+      border: 1px solid $color-state-danger-200;
+      background-color: $color-state-danger-100;
+      color: $color-state-danger-500;
+      border-radius: 99px;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        background-color: $color-state-danger-400;
+        color: $color-state-danger-50;
+      }
+    }
+  }
+
+  .go__with {
+    @extend %flex;
+    @extend %gap-16;
+
+    .desc {
+      white-space: nowrap;
+      align-self: start;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      @extend %flex;
+      @extend %gap-8;
+      flex-wrap: wrap;
+    }
+  }
+}
