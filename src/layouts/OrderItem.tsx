@@ -16,7 +16,7 @@ export default function OrderItem({
       <div className="main__food">
         <Image img={img} alt={name} />
         <span className="title">{name}</span>
-        <span className="price">${price}</span>
+        <span className="price">${price.toFixed(2)}</span>
         <CartControls qty={quantity} />
         <span className="delete-btn" onClick={() => console.log(id)}>
           Remove
