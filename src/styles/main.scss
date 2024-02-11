@@ -1,19 +1,30 @@
-@import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/variables";
 @import "abstracts/placeholder";
 
 @import "base/base";
 @import "base/reset";
 @import "base/typography";
 
+@import "layout/aside";
+@import "layout/banner";
+@import "layout/banner_next_prev-btns";
+@import "layout/cart-controls";
+@import "layout/cart";
+@import "layout/form-search";
 @import "layout/grid";
 @import "layout/header";
-@import "layout/nav-not-auth";
-@import "layout/form-search";
 @import "layout/leading";
 @import "layout/main";
-@import "layout/aside";
+@import "layout/nav-not-auth";
+@import "layout/order-item";
+@import "layout/order-items.scss";
 
-@import "components/logo";
 @import "components/button";
+@import "components/cart-footer";
+@import "components/cart-header";
+@import "components/dot";
+@import "components/dots";
 @import "components/input";
+@import "components/label-display";
+@import "components/logo";

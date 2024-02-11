@@ -1,0 +1,13 @@
+.cart {
+  width: 32rem;
+  box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-height: calc(
+    100vh - 148px
+  ); // header height=44px + pdd-top=40px + pdd-bot=24px + 24px + 24px + 16px
+}
