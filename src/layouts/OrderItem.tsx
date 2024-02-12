@@ -1,7 +1,8 @@
-import { Order } from "./OrderItems";
 import Image from "../components/Image";
 import LabelDisplay from "../components/LabelDisplay";
 import CartControls from "./CartControls";
+import { useDispatch } from "react-redux";
+import { type Order, removeOrder } from "../features/cart/cartSlice";
 
 export default function OrderItem({
   id,
@@ -11,6 +12,12 @@ export default function OrderItem({
   quantity,
   surplus,
 }: Order) {
+  const dispatch = useDispatch();
+
+  function handleRemoveOrder(id: number): void {
+    dispatch(removeOrder(id));
+  }
+
   return (
     <div className="order__item">
       <div className="main__food">
@@ -18,7 +25,7 @@ export default function OrderItem({
         <span className="title">{name}</span>
         <span className="price">${price.toFixed(2)}</span>
         <CartControls qty={quantity} />
-        <span className="delete-btn" onClick={() => console.log(id)}>
+        <span className="delete-btn" onClick={() => handleRemoveOrder(id)}>
           Remove
         </span>
       </div>
