@@ -52,9 +52,23 @@ export const orderSlice = createSlice({
       const orderId = action.payload;
       state.orders = state.orders.filter((order) => order.id !== orderId);
     },
+    incrementMenu: (state, action: PayloadAction<number>) => {
+      const orderId = action.payload;
+      const orderItem = state.orders.find((order) => order.id === orderId);
+
+      orderItem!.quantity = orderItem!.quantity + 1;
+    },
+    decrementMenu: (state, action: PayloadAction<number>) => {
+      const orderId = action.payload;
+      const orderItem = state.orders.find((order) => order.id === orderId);
+
+      orderItem!.quantity > 1
+        ? (orderItem!.quantity = orderItem!.quantity - 1)
+        : (state.orders = state.orders.filter((order) => order.id !== orderId));
+    },
   },
 });
 
-export const { removeOrder } = orderSlice.actions;
+export const { removeOrder, incrementMenu, decrementMenu } = orderSlice.actions;
 
 export default orderSlice.reducer;
