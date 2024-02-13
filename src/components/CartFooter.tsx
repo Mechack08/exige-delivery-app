@@ -1,6 +1,8 @@
 import { GoArrowRight } from "react-icons/go";
 
 import Button from "./Button";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 type CartFooterDescProps = {
   label: string;
@@ -8,21 +10,33 @@ type CartFooterDescProps = {
 };
 
 export default function CartFooter() {
+  const orders = useSelector((state: RootState) => state.orders.orders);
+
+  const total = orders.reduce(
+    (total, order) => total + order.quantity * order.price,
+    0
+  );
+
+  const delivery = 2.99;
+  const funcFees = 0.62;
+
+  const genTotal = total + delivery + funcFees;
+
   return (
     <div className="cart__footer">
       <div className="cart__footer-description">
-        <div className="cart__footer-details">
-          <CartFooterDesc label="Sub Total" price={76.15} />
-          <CartFooterDesc label="Delivery Fees" price={4.33} />
-          <CartFooterDesc label="Function Fees" price={0.62} />
+        <div className="cart__footer-details small__size">
+          <CartFooterDesc label="Sub Total" price={total} />
+          <CartFooterDesc label="Delivery Fees" price={delivery} />
+          <CartFooterDesc label="Function Fees" price={funcFees} />
         </div>
         <div className="cart__footer-details total">
-          <CartFooterDesc label="Total" price={81.1} />
+          <CartFooterDesc label="Total" price={genTotal} />
         </div>
       </div>
       <div className="cart__footer-btn">
         <Button radius="Rounded">
-          Order and checkout ($81.10) <GoArrowRight />
+          Order and checkout (${genTotal.toFixed(2)}) <GoArrowRight />
         </Button>
       </div>
     </div>
