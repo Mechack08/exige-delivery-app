@@ -23,8 +23,8 @@ export default function OrderItem({
       <div className="main__food">
         <Image img={img} alt={name} />
         <span className="title">{name}</span>
-        <span className="price">${price.toFixed(2)}</span>
-        <CartControls qty={quantity} />
+        <span className="price">${(price * quantity).toFixed(2)}</span>
+        <CartControls id={id} qty={quantity} />
         <span className="delete-btn" onClick={() => handleRemoveOrder(id)}>
           Remove
         </span>
