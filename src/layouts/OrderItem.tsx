@@ -34,7 +34,7 @@ export default function OrderItem({
           <span className="desc">Come with:</span>
           <ul>
             {surplus.map((item) => (
-              <LabelDisplay key={item}>{item}</LabelDisplay>
+              <LabelDisplay key={item} item={item} id={id} />
             ))}
           </ul>
         </div>
