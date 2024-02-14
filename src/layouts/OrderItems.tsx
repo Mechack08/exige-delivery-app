@@ -1,9 +1,8 @@
-import { RootState } from "../store/store";
-import { useSelector } from "react-redux";
 import OrderItem from "./OrderItem";
+import { useSelectorCustom } from "../store/hooks";
 
 export default function OrderItems() {
-  const orders = useSelector((state: RootState) => state.orders.orders);
+  const { orders } = useSelectorCustom((state) => state.orders);
 
   return (
     <div className="order_items">
