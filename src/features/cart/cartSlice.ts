@@ -66,9 +66,22 @@ export const orderSlice = createSlice({
         ? (orderItem!.quantity = orderItem!.quantity - 1)
         : (state.orders = state.orders.filter((order) => order.id !== orderId));
     },
+    removeSurplus: (
+      state,
+      action: PayloadAction<{ id: number; surplus: string }>
+    ) => {
+      const orderItem = state.orders.find(
+        (order) => order.id === action.payload.id
+      );
+
+      orderItem!.surplus = orderItem!.surplus.filter(
+        (item) => item !== action.payload.surplus
+      );
+    },
   },
 });
 
-export const { removeOrder, incrementMenu, decrementMenu } = orderSlice.actions;
+export const { removeOrder, incrementMenu, decrementMenu, removeSurplus } =
+  orderSlice.actions;
 
 export default orderSlice.reducer;
