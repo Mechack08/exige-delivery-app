@@ -400,6 +400,9 @@ header {
   scrollbar-width: thin;
   padding: 1.2rem 1.6rem;
 }
+.cart__footer-details.small__size {
+  font-size: 1.2rem;
+}
 .cart__footer-details.total {
   position: relative;
   padding-top: 1.6rem;
