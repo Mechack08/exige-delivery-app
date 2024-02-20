@@ -1,0 +1,32 @@
+.star__list {
+  @extend %flex;
+  @extend %gap-4;
+
+  .star {
+    color: $color-text-400;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      font-size: 1.6rem;
+    }
+
+    &.active {
+      color: $color-secondary-300;
+    }
+  }
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.star {
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 5px;
+}
