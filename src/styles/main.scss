@@ -6,6 +6,7 @@
 @import "base/reset";
 @import "base/typography";
 
+@import "layout/article-section";
 @import "layout/aside";
 @import "layout/banner";
 @import "layout/banner_next_prev-btns";
@@ -18,9 +19,11 @@
 @import "layout/main";
 @import "layout/nav-not-auth";
 @import "layout/order-item";
-@import "layout/order-items.scss";
+@import "layout/order-items";
 
 @import "components/button";
+@import "components/card-reataurant";
+@import "components/card-restaurant-list";
 @import "components/cart-footer";
 @import "components/cart-header";
 @import "components/dot";
@@ -28,3 +31,4 @@
 @import "components/input";
 @import "components/label-display";
 @import "components/logo";
+@import "components/stars";
