@@ -1,0 +1,14 @@
+.article__section {
+  margin-top: 3.2rem;
+  @extend %flex-col;
+  gap: 6.4rem;
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  &-header {
+    @extend %flex-col;
+    @extend %gap-24;
+  }
+}
